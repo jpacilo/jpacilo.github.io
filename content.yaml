@@ -1,5 +1,5 @@
 # everything on the page comes from this file. Edit here, then run `make site`
-# (or `make build`) from the workspace root to regenerate index.html.
+# or `make build` from the workspace root to regenerate the index.html.
 
 site:
   title: Joshua Acilo
@@ -7,10 +7,6 @@ site:
 
 name: Joshua Acilo
 
-# photo_focus: auto finds your face and frames it (smart crop). photo_zoom sets how much
-# is shown around it, in face-heights: ~3.5 is a close headshot, 4.5 head and shoulders,
-# 6+ shows more of the scene. photo_face_y is where your face sits, from the top: a
-# bigger value pans up (more above your head), a smaller one pans down.
 photo: ../img/spec.JPG
 photo_focus: auto
 photo_zoom: 5.2
