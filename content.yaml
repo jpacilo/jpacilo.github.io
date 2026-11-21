@@ -1,4 +1,4 @@
-# Everything on the page comes from this file. Edit here, then run `make site`
+# everything on the page comes from this file. Edit here, then run `make site`
 # (or `make build`) from the workspace root to regenerate index.html.
 
 site:
@@ -6,24 +6,16 @@ site:
   description:
 
 name: Joshua Acilo
-# PHOTO: not shown on the page; the "photo" link under your name opens it.
-# Any JPG, PNG or WebP, any size or shape: the build crops it to a square, shrinks it and
-# strips its metadata (phone photos carry GPS location) into img/photo.jpg (600px), the only
-# copy that gets published. Paths are relative to jpacilo.github.io/, so ../img/ is the
-# workspace's img folder, outside the public repo. Keep originals there.
-#
+
 # photo_focus: auto finds your face and frames it (smart crop). photo_zoom sets how much
-#   is shown around it, in face-heights: ~3.5 is a close headshot, 4.5 head and shoulders,
-#   6+ shows more of the scene. photo_face_y is where your face sits, from the top:
-#   a bigger value pans up (more above your head), a smaller one pans down.
-# To place the crop by hand instead, set photo_focus to "X% Y%" ("50% 50%" is the
-#   centre, "50% 25%" keeps the upper part); photo_zoom is then ignored.
+# is shown around it, in face-heights: ~3.5 is a close headshot, 4.5 head and shoulders,
+# 6+ shows more of the scene. photo_face_y is where your face sits, from the top: a
+# bigger value pans up (more above your head), a smaller one pans down.
 photo: ../img/spec.JPG
 photo_focus: auto
 photo_zoom: 5.2
 photo_face_y: 46%
 
-# The bio, under your name and links. A blank line starts a new paragraph.
 bio: >-
     I'm a research SWE at TUM CREATE. I lead the e2e model systems integration and optimisation in one work package of a government-led, large-scale decarbonisation project in Singapore, where we're building a network of scientific models in a federated computing framework for net zero planning.
 
@@ -33,10 +25,9 @@ bio: >-
 
     I hold an MEng in Artificial Intelligence from [UPD](https://up.edu.ph/) and BSc in Electronics Engineering from [UST](https://www.ust.edu.ph/).
 
-# The row of links under your name, separated by dots, in this order.
 links:
   - label: Photo
-    url: img/photo.jpg        # generated from `photo` above
+    url: img/photo.jpg
   - label: Email
     url: mailto:joshuaacilo.13@gmail.com
   - label: Github
