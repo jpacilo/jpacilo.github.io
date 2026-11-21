@@ -1,0 +1,23 @@
+# This repo is public. Anything not listed here is uploaded by `git add .`.
+
+# Photos: only the generated, metadata-free crop is published. Originals (which carry
+# GPS location) live in the workspace img/ folder, outside this repo.
+img/*
+!img/photo.jpg
+
+# The CV lives on Google Drive, not in this repo
+*.pdf
+
+# Secrets, just in case
+.env
+.env.*
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Python cache from the build scripts
+__pycache__/

@@ -1,0 +1,290 @@
+/* Type ratios after ruiying-ma.github.io. Layout: one lean column — name, links, bio,
+   then a few short sections.
+   Colours: FF7 Remake/Rebirth — Midgar steel neutrals, materia (mako) green for links.
+   Type: Newsreader, self-hosted. */
+
+@font-face {
+  font-family: "Newsreader";
+  src: url(fonts/newsreader.woff2) format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  --serif: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
+
+  /* Ratios from the reference */
+  --text-base: 1.09375rem;  /* 17.5px: the reference's 16.2px, scaled up ~8% */
+  --text-small: 0.875rem;   /* 14px */
+  --line-body: 1.55;
+  --h1-size: 2.375rem;      /* 38px */
+  --h1-gap: calc(0.5rem + 3.4px);
+  --section-gap: 1.25rem;
+
+  /* Light: morning haze over the Sector 5 slums */
+  --ground: #f9faf8;   /* halfway between the original #f2f4f1 and white */
+  --ink: #0f1a1f;      /* Midgar steel: name, headings */
+  --soft: #34434a;     /* body */
+  --muted: #4d5a60;    /* footer */
+  /* Links: materia green (7.5:1 on the ground).
+     Materia blue alternative: --accent #174ea6, --accent-hover #123d8a, --select #cfdcf5;
+     dark #8bbcff / #b5d4ff / #1c3560. */
+  --accent: #065f47;
+  --accent-hover: #043d2e;
+  --select: #c6eadb;
+  color-scheme: light;
+}
+
+/* Dark: Midgar at night. Follows the system unless the toggle picked light,
+   or the toggle picked dark. Keep both blocks in sync. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0b1015;
+    --ink: #e3ebed;
+    --soft: #b3c1c7;
+    --muted: #95a3a9;
+    --accent: #5fdcb0;
+    --accent-hover: #8be9c6;
+    --select: #17483a;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground: #0b1015;
+  --ink: #e3ebed;
+  --soft: #b3c1c7;
+  --muted: #95a3a9;
+  --accent: #5fdcb0;
+  --accent-hover: #8be9c6;
+  --select: #17483a;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-size: var(--text-base);
+  line-height: var(--line-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--select); color: var(--ink); }
+
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+b { font-weight: 700; }
+
+p {
+  margin: 0;
+  color: var(--soft);
+  text-wrap: pretty;
+}
+
+/* One column, kept to a comfortable reading width (~90 characters a line). 800px is
+   tuned so every bio bullet ends on a near-full line instead of a stray last word. */
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+/* ---------- Theme toggle: top-right corner ---------- */
+
+.theme {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.theme:hover { color: var(--accent); }
+
+.theme svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme .sun { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme .moon { display: none; }
+  :root:not([data-theme="light"]) .theme .sun { display: block; }
+}
+
+:root[data-theme="dark"] .theme .moon { display: none; }
+:root[data-theme="dark"] .theme .sun { display: block; }
+
+/* ---------- Bio: name and paragraphs ---------- */
+
+.bio {
+  margin-bottom: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: var(--h1-size);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+
+
+/* Justified bio, with hyphenation so the gaps between words stay even. Phones keep
+   ragged lines, where justified text would leave big gaps. */
+@media (min-width: 641px) {
+  .bio li {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+/* Links sit right under the name, then a gap before the bio */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.15rem 0 1.25rem;
+}
+
+.links a { font-size: 0.96875rem; }   /* 15.5px: a step under the 17.5px body */
+
+.links a:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.3rem;
+  color: var(--soft);
+  display: inline-block;   /* keeps the dot out of the hover underline */
+}
+
+/* ---------- Sections ---------- */
+
+section {
+  margin-bottom: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+
+section:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+h2 {
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+  font-size: 1.625rem;   /* 26px */
+  font-weight: 700;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+
+section > p { margin-bottom: 0.3rem; }
+
+/* A gap after the intro line, matching the space between bio paragraphs */
+section > p.intro { margin-bottom: 0.7em; }
+
+/* Bulleted lists (bio, research directions), hanging so wrapped lines align with the text */
+.bullets {
+  margin: 0;
+  padding-left: 1.15em;
+  color: var(--soft);
+  text-wrap: pretty;
+}
+
+.bullets li::marker { color: var(--muted); }
+
+.bio .bullets li + li { margin-top: 0.55em; }
+
+.directions li + li { margin-top: 0.3rem; }
+
+/* News: date in a fixed column, text beside it */
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  color: var(--soft);
+  line-height: 1.5;
+}
+
+.date {
+  flex-shrink: 0;
+  width: 5.75rem;
+  font-size: var(--text-small);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  margin-top: 2.5rem;
+  text-align: right;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 0.8125rem;   /* 13px */
+}
+
+/* ---------- Phones ---------- */
+
+@media (max-width: 640px) {
+  .page { padding: 2rem 1.25rem 3.5rem; }
+
+  h1 { font-size: 1.875rem; }
+}
+
+/* Very small phones (320px): a touch smaller so the full name stays on one line */
+@media (max-width: 359px) {
+  h1 { font-size: 1.625rem; }
+}

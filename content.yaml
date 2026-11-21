@@ -1,0 +1,61 @@
+# Everything on the page comes from this file. Edit here, then run `make site`
+# (or `make build`) from the workspace root to regenerate index.html.
+
+site:
+  title: Joshua Acilo
+  description:
+
+name: Joshua Acilo
+# PHOTO: not shown on the page; the "photo" link under your name opens it.
+# Any JPG, PNG or WebP, any size or shape: the build crops it to a square, shrinks it and
+# strips its metadata (phone photos carry GPS location) into img/photo.jpg (600px), the only
+# copy that gets published. Paths are relative to jpacilo.github.io/, so ../img/ is the
+# workspace's img folder, outside the public repo. Keep originals there.
+#
+# photo_focus: auto finds your face and frames it (smart crop). photo_zoom sets how much
+#   is shown around it, in face-heights: ~3.5 is a close headshot, 4.5 head and shoulders,
+#   6+ shows more of the scene. photo_face_y is where your face sits, from the top:
+#   a bigger value pans up (more above your head), a smaller one pans down.
+# To place the crop by hand instead, set photo_focus to "X% Y%" ("50% 50%" is the
+#   centre, "50% 25%" keeps the upper part); photo_zoom is then ignored.
+photo: ../img/spec.JPG
+photo_focus: auto
+photo_zoom: 5.2
+photo_face_y: 46%
+
+# The bio, under your name and links. A blank line starts a new paragraph.
+bio: >-
+    I'm a research SWE at TUM CREATE. I lead the e2e [model systems integration and optimisation](https://drive.google.com/file/d/1EaSgKbDpng1UsVj5TXjiWfqmRINocgSS/view?usp=drive_link) in one work package of a government-led, large-scale decarbonisation project in Singapore, where we're building a network of scientific models in a federated computing framework for net zero planning.
+
+    I recently finished my research visit at TUM [Chair of Renewable and Sustainable Energy Systems](https://www.epe.ed.tum.de/en/ens/homepage/), where I contributed efforts in optimising a large-scale LP energy system model from the&nbsp;ground-up.
+    
+    Previously, I worked in a silicon valley, VC-backed, logistics AI startup called Expedock as a Machine Learning Engineer where we developed a [novel AI framework](https://arxiv.org/abs/2405.20245) to reliably measure and approach real-world information extraction (KIE, VDU) problems in business contexts which was published at IEEE MIPR 2024. Before that, I was a Data Scientist at Globe Telecom, one of the largest companies in the Philippines. My team won its [highest award](https://drive.google.com/file/d/1O3pMm7bmiyskz3GYyJIdm1bDMyZg9pdw/view?usp=drive_link) in 2022 for a multi-modal geospatial DS solution used across a wide array of business problems, spanning from fraud detection to network&nbsp;expansion.
+
+    I hold an MEng in Artificial Intelligence from [UPD](https://up.edu.ph/) and BSc in Electronics Engineering from [UST](https://www.ust.edu.ph/).
+
+# The row of links under your name, separated by dots, in this order.
+links:
+  - label: Photo
+    url: img/photo.jpg        # generated from `photo` above
+  - label: Email
+    url: mailto:joshuaacilo.13@gmail.com
+  - label: Github
+    url: https://github.com/jpacilo
+  - label: CV
+    url: https://drive.google.com/file/d/1-iFVLskmap9kmVD407VIhy_SreiwSSY1/view?usp=drive_link
+
+research:
+  heading: Seeking a PhD Position
+  intro: >-
+    I’m looking to start my PhD in Central Europe in late Q2 2027. My interests:
+
+
+  directions:
+    - label: efficient ML systems and sustainable computing
+      text: >-
+        how can we design scalable, and distributed ML systems and algorithms with energy efficiency and carbon awareness as the first-class citizens?
+    - label: AI for scientific modelling
+      text: >-
+        how can we use ML/AI to accurately represent and simulate complex systems in energy and climate domains?
+
+news: []

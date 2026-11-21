@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Lightning bolt in materia green; lighter green when the browser is in dark mode -->
+  <style>
+    path { fill: #065f47; }
+    @media (prefers-color-scheme: dark) { path { fill: #5fdcb0; } }
+  </style>
+  <path d="M13.5 1.5 3.75 13.6h6.9L9.4 22.5l10.85-13.2h-7.05z"/>
+</svg>
