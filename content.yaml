@@ -25,7 +25,7 @@ photo_face_y: 46%
 
 # The bio, under your name and links. A blank line starts a new paragraph.
 bio: >-
-    I'm a research SWE at TUM CREATE. I lead the e2e [model systems integration and optimisation](https://drive.google.com/file/d/1EaSgKbDpng1UsVj5TXjiWfqmRINocgSS/view?usp=drive_link) in one work package of a government-led, large-scale decarbonisation project in Singapore, where we're building a network of scientific models in a federated computing framework for net zero planning.
+    I'm a research SWE at TUM CREATE. I lead the e2e model systems integration and optimisation in one work package of a government-led, large-scale decarbonisation project in Singapore, where we're building a network of scientific models in a federated computing framework for net zero planning.
 
     I recently finished my research visit at TUM [Chair of Renewable and Sustainable Energy Systems](https://www.epe.ed.tum.de/en/ens/homepage/), where I contributed efforts in optimising a large-scale LP energy system model from the&nbsp;ground-up.
     
