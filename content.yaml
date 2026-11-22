@@ -13,11 +13,11 @@ photo_zoom: 5.2
 photo_face_y: 46%
 
 bio: >-
-    I'm a research SWE at TUM CREATE. I lead the e2e model systems integration and optimisation in one work package of a government-led, large-scale decarbonisation project in Singapore, where we're building a network of scientific models in a federated computing framework for net zero planning.
+    I'm a research SWE at TUM CREATE. I lead the software engineering in one work package of CE2M where I cover the e2e system integration, model optimisation, solver benchmarks, and data analysis. The project is a government-led, large-scale decarbonisation project in Singapore, where we're building a network of scientific optimisation models in a federated computing framework for net zero planning.
 
-    I recently finished my research visit at TUM [Chair of Renewable and Sustainable Energy Systems](https://www.epe.ed.tum.de/en/ens/homepage/), where I contributed efforts in optimising a large-scale LP energy system model from the&nbsp;ground-up.
+    I recently finished my research visit at TUM [Chair of Renewable and Sustainable Energy Systems](https://www.epe.ed.tum.de/en/ens/homepage/), where I contributed efforts in optimising a large-scale energy system LP/MILP from the&nbsp;ground-up.
     
-    Previously, I worked in a silicon valley, VC-backed, logistics AI startup called Expedock as a Machine Learning Engineer where we developed a [novel AI framework](https://arxiv.org/abs/2405.20245) to reliably measure and approach real-world information extraction (KIE, VDU) problems in business contexts which was published at IEEE MIPR 2024. Before that, I was a Data Scientist at Globe Telecom, one of the largest companies in the Philippines. My team won its [highest award](https://drive.google.com/file/d/1O3pMm7bmiyskz3GYyJIdm1bDMyZg9pdw/view?usp=drive_link) in 2022 for a multi-modal geospatial DS solution used across a wide array of business problems, spanning from fraud detection to network&nbsp;expansion.
+    Previously, I worked in a silicon valley, VC-backed, logistics AI startup called Expedock as a Machine Learning Engineer where we developed a [novel AI framework](https://arxiv.org/abs/2405.20245) to reliably measure and approach real-world information extraction (KIE, VDU) problems in business contexts which was published at IEEE MIPR 2024. Before that, I was a Data Scientist at Globe Telecom, one of the largest companies in the Philippines. My team won its [highest award](https://drive.google.com/file/d/1O3pMm7bmiyskz3GYyJIdm1bDMyZg9pdw/view?usp=drive_link) in 2022 for a multi-modal geospatial DS solution used in a wide array of business problems like fraud detection, network / capacity expansion, micromarketing.
 
     I hold an MEng in Artificial Intelligence from [UPD](https://up.edu.ph/) and BSc in Electronics Engineering from [UST](https://www.ust.edu.ph/).
 
@@ -34,7 +34,7 @@ links:
 research:
   heading: Seeking a PhD Position
   intro: >-
-    I’m looking to start my PhD in Central Europe in late Q2 2027. My interests:
+    I’m looking to start my PhD in Central Europe in late Q2 2027. My current interests are the following:
 
 
   directions:
@@ -43,6 +43,6 @@ research:
         how can we design scalable, and distributed ML systems and algorithms with energy efficiency and carbon awareness as the first-class citizens?
     - label: AI for scientific modelling
       text: >-
-        how can we use ML/AI to accurately represent and simulate complex systems in energy and climate domains?
+        how can we use ML/AI to accurately represent and simulate complex systems and processes in the energy and climate domains?
 
 news: []
